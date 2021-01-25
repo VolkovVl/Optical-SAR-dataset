@@ -1,0 +1,7 @@
+{
+    "max_keypoints": 2000,
+    "contrastThreshold": 0.04,
+    "edgeThreshold": 10,
+    "sigma": 2.5,
+    "nOctaveLayers": 3
+}
