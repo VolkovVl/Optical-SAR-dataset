@@ -1,0 +1,5 @@
+{
+    "max_keypoints": 2000,
+    "radius": 3,
+    "tau": 10
+}
