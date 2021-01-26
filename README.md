@@ -10,11 +10,11 @@
 
 Пример запуска в первом режиме:
 
-python main.py .\keypoints\kps_sift_optim 4 -r 10
+python main.py .\keypoints\kps_sift_optim 4
 
 Пример запуска во втором режиме:
 
-python main.py .\keypoints\kps_sift_optim 4
+python main.py .\keypoints\kps_sift_optim 4 -r 10
 
 # Формат устойчивых точек
 Примеры файлов с устойчивыми точками лежат в папке ./keypoints.
