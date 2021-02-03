@@ -9,6 +9,10 @@
 2) порог сопоставления ('theta', type=float, позиционный параметр)
 3) радиус окрестности, в которой искать сопоставление ('--search_raidus', '-r', type=int, default=inf)
 
+Требуемые библиотеки:
+1) numpy
+2) tqdm
+
 Пример запуска в первом режиме:
 
 python main.py .\keypoints\kps_sift_optim 4
