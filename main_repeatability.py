@@ -4,7 +4,7 @@ import os.path as osp
 from tqdm import tqdm
 import numpy as np
 
-from load_functions import read_json_data, get_opt_filenames
+from load_functions import read_json_data, get_filenames
 from kp_detection import get_matches_NN, get_mask_of_near_matches
 
 
@@ -29,7 +29,7 @@ def convert_json_kps_to_array(kps_json):
 
 def _main(kps_dir, theta, search_radius):
     min_dists_list = []
-    opt_filenames_list = get_opt_filenames(kps_dir)
+    opt_filenames_list = get_filenames(osp.join(kps_dir, 'opt'))
     for filename in tqdm(opt_filenames_list):
         # read first json (opt)
         opt_path = osp.join(kps_dir, 'opt', filename)
