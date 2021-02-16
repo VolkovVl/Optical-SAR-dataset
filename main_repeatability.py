@@ -29,8 +29,8 @@ def convert_json_kps_to_array(kps_json):
 
 def _main(kps_dir, theta, search_radius):
     min_dists_list = []
-    opt_filenames_list = get_filenames(osp.join(kps_dir, 'opt'))
-    for filename in tqdm(opt_filenames_list):
+    filenames_list = get_filenames(osp.join(kps_dir, 'opt'))
+    for filename in tqdm(filenames_list):
         # read first json (opt)
         opt_path = osp.join(kps_dir, 'opt', filename)
         opt_kps_json = read_json_data(opt_path)
@@ -44,7 +44,7 @@ def _main(kps_dir, theta, search_radius):
         min_dists = get_matches_NN(opt_kps_array, sar_kps_array, matches_mask=matches_mask)[1]
         min_dists_list.extend(min_dists)
 
-    num_img = len(opt_filenames_list)
+    num_img = len(filenames_list)
     dists = np.array(min_dists_list)
     thresholds = [theta]
     data_num, data_per = prepare_data(dists, thresholds, num_img)

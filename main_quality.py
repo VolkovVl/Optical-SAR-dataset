@@ -40,10 +40,10 @@ def apply_matrix_to_kps(kp, matrix):
 
 
 def _main(matches_dir, image_size, ransac_thr, dists_thr):
-    opt_filename_list = get_filenames(matches_dir)
+    filename_list = get_filenames(matches_dir)
     false_pair_list = []
     true_pair_list = []
-    for matches_filename in tqdm(opt_filename_list):
+    for matches_filename in tqdm(filename_list):
         image_filename = osp.splitext(matches_filename)[0]
         src_kps, dst_kps = load_matches(osp.join(matches_dir, matches_filename))
         if len(src_kps) == 0:
