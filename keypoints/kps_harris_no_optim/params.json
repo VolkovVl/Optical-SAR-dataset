@@ -1,7 +1,0 @@
-{
-    "max_keypoints": 2000,
-    "binning_size": 1024,
-    "blockSize": 2,
-    "ksize": 3,
-    "k": 0.04
-}
